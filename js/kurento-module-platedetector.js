@@ -34,7 +34,7 @@ var Filter = kurentoClient.register.abstracts.Filter;
  *  PlateDetectorFilter interface. This type of {@link module:core/abstracts.Endpoint Endpoint} detects
  *  vehicle plates in a video feed.
  *
- * @extends module:core/abstracts.Filter
+ * @extends module:corecore/abstracts.Filter
  *
  * @constructor module:platedetector.PlateDetectorFilter
  *
@@ -92,7 +92,7 @@ PlateDetectorFilter.constructorParams = {
 /**
  * @alias module:platedetector.PlateDetectorFilter.events
  *
- * @extend module:core/abstracts.Filter.events
+ * @extend module:corecore/abstracts.Filter.events
  */
 PlateDetectorFilter.events = Filter.events.concat(['PlateDetected']);
 
