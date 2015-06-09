@@ -4,16 +4,15 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 var inherits = require('inherits');
@@ -57,15 +56,13 @@ inherits(PlateDetectorFilter, Filter);
 // Public methods
 //
 
-
 /**
  * Configures the average width of the license plates in the image represented 
  * as an image percentage.
  *
  * @alias module:platedetector.PlateDetectorFilter.setPlateWidthPercentage
  *
- * @param   {external:Number} plateWidthPercentage
-
+ * @param {external:Number} plateWidthPercentage
  *  average width of the license plates represented as an image percentage 
  *  [0..1].
  *
@@ -78,12 +75,13 @@ PlateDetectorFilter.prototype.setPlateWidthPercentage = function(plateWidthPerce
                   ? Array.prototype.shift.apply(arguments)
                   : undefined;
 
-  checkType('float', 'plateWidthPercentage', plateWidthPercentage, {required: true}
-);
+  checkType('float', 'plateWidthPercentage', plateWidthPercentage, {required: true});
 
   var params = {
-    plateWidthPercentage: plateWidthPercentage,
+    plateWidthPercentage: plateWidthPercentage
   };
+
+  callback = (callback || noop).bind(this)
 
   return this._invoke(transaction, 'setPlateWidthPercentage', params, callback);
 };
@@ -96,8 +94,7 @@ PlateDetectorFilter.prototype.setPlateWidthPercentage = function(plateWidthPerce
 /**
  * @alias module:platedetector.PlateDetectorFilter.constructorParams
  *
- * @property   {module:core.MediaPipeline} mediaPipeline
-
+ * @property {module:core.MediaPipeline} mediaPipeline
  *  the parent {@link module:core.MediaPipeline MediaPipeline} of this {@link 
  *  module:platedetector.PlateDetectorFilter PlateDetectorFilter}
  */
@@ -105,7 +102,7 @@ PlateDetectorFilter.constructorParams = {
   mediaPipeline: {
     type: 'MediaPipeline',
     required: true
-  },
+  }
 };
 
 /**
@@ -148,16 +145,15 @@ require('.');
 /*
  * (C) Copyright 2013-2015 Kurento (http://kurento.org/)
  *
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the GNU Lesser General Public License
- * (LGPL) version 2.1 which accompanies this distribution, and is available at
+ * All rights reserved. This program and the accompanying materials are made
+ * available under the terms of the GNU Lesser General Public License (LGPL)
+ * version 2.1 which accompanies this distribution, and is available at
  * http://www.gnu.org/licenses/lgpl-2.1.html
  *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
 
 /**
