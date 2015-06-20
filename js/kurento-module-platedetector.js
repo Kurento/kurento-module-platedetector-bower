@@ -19,8 +19,11 @@ var inherits = require('inherits');
 
 var kurentoClient = require('kurento-client');
 
+var disguise = kurentoClient.disguise;
+
 var checkType      = kurentoClient.checkType;
 var ChecktypeError = checkType.ChecktypeError;
+
 
 var Transaction = kurentoClient.TransactionsManager.Transaction;
 
@@ -85,7 +88,7 @@ PlateDetectorFilter.prototype.setPlateWidthPercentage = function(plateWidthPerce
 
   callback = (callback || noop).bind(this)
 
-  return this._invoke(transaction, 'setPlateWidthPercentage', params, callback);
+  return disguise(this._invoke(transaction, 'setPlateWidthPercentage', params, callback), this)
 };
 /**
  * @callback module:platedetector.PlateDetectorFilter~setPlateWidthPercentageCallback
