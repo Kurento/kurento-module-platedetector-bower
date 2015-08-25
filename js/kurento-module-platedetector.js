@@ -119,7 +119,7 @@ PlateDetectorFilter.events = Filter.events.concat(['PlateDetected']);
 
 
 /**
- * Checker for {@link platedetector.PlateDetectorFilter}
+ * Checker for {@link module:platedetector.PlateDetectorFilter}
  *
  * @memberof module:platedetector
  *
