@@ -171,7 +171,7 @@ require('.');
  */
 
 Object.defineProperty(exports, 'name',    {value: 'platedetector'});
-Object.defineProperty(exports, 'version', {value: '6.3.1-dev'});
+Object.defineProperty(exports, 'version', {value: '6.3.0'});
 
 
 var PlateDetectorFilter = require('./PlateDetectorFilter');
